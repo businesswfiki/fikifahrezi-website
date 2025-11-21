@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,24 +13,20 @@ body {
     overflow-x: hidden;
 }
 
-/* KUNCI FIX: Body dilarang scroll saat menu terbuka */
 body.menu-open {
     overflow: hidden;
 }
 
-/* KUNCI FIX: Element yang akan didorong (Push Effect) */
 #page-wrapper {
     transition: transform 0.5s ease-in-out;
     position: relative; 
     z-index: 1;
 }
 
-/* FIX: Mendorong konten utama ke kiri dan mengunci posisinya saat menu terbuka */
 body.menu-open #page-wrapper {
     transform: translateX(-300px);
 }
 
-/* --- DIMMING LAYER STYLE --- */
 #dim-overlay {
     position: fixed;
     top: 0;
@@ -65,7 +61,7 @@ body.menu-open #dim-overlay {
     padding: 4rem 0;
 }
 
-/* --- Menu Overlay Styling --- */
+/* Menu Overlay Styling */
 .menu-toggle {
     position: fixed;
     top: 0;
@@ -185,7 +181,6 @@ body.menu-open #dim-overlay {
     cursor: pointer;
 }
 
-/* --- Hero Section Updated (2 Columns + ID Card) --- */
 .hero {
     background: radial-gradient(circle at center, #252930 0%, #1a1d23 100%);
     position: relative;
@@ -262,7 +257,7 @@ body.menu-open #dim-overlay {
     animation: bounce 2s infinite;
 }
 
-/* --- 3D ID Card Styles --- */
+/* 3D ID Card Styles */
 .hero-interactive {
     display: flex;
     justify-content: center;
@@ -527,7 +522,7 @@ body.menu-open #dim-overlay {
     margin-top: 2rem;
 }
 
-/* --- Experience Grid Stacking Fix --- */
+/* Experience Grid */
 .experience-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -662,7 +657,7 @@ body.menu-open #dim-overlay {
     stroke: #1a1d23;
 }
 
-/* --- Contact Section --- */
+/* Contact Section */
 .section#contact { 
     background: radial-gradient(circle at center, #252930 0%, #1a1d23 100%);
     text-align: center;
@@ -750,7 +745,6 @@ body.menu-open #dim-overlay {
     stroke: #1a1d23;
 }
 
-/* --- Footer --- */
 footer {
     background-color: #111;
     padding: 1.5rem 0;
