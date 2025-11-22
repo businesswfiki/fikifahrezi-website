@@ -278,23 +278,40 @@ body.menu-open #dim-overlay {
     cursor: pointer;
 }
 
-@media screen and (min-width: 48em) {
-    .openbtn {
-        top: 1rem; 
-        right: 1rem;
+/* --- RESPONSIVE ADJUSTMENTS --- */
+
+/* Aturan ini akan berlaku untuk layar dengan lebar MAKSIMAL 1024px (termasuk tablet dan HP) */
+@media (max-width: 1024px) {
+    .gear-grid {
+        /* Mengubah tata letak menjadi 2 kolom yang sama lebarnya */
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .devices-grid {
+        /* Mengubah tata letak menjadi 2 kolom yang sama lebarnya */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-body.menu-open .openbtn {
-    opacity: 0;
-    pointer-events: none;
-}
-
+/* Opsional: Aturan ini berlaku untuk layar dengan lebar MAKSIMAL 768px (HP dan tablet vertikal) */
 @media (max-width: 768px) {
+    .gear-grid, 
+    .devices-grid {
+        /* Anda bisa menggunakan 1 kolom saja di layar yang sangat kecil jika diperlukan */
+        /* grid-template-columns: 1fr; */
+        
+        /* Namun, 2 kolom biasanya terlihat baik. Mari kita pertahankan 2 kolom */
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Sekalian perbaiki masalah jarak vertical yang Anda keluhkan */
     header {
+        /* Kurangi padding atas agar judul naik */
         padding: 20px 20px; 
     }
+
     main {
-        margin: 20px auto; 
+        /* Kurangi margin top main agar konten lebih dekat ke header */
+        margin-top: 20px;
     }
 }
