@@ -27,3 +27,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+const lastUpdateEl = document.getElementById('lastUpdate');
+if (lastUpdateEl) {
+    const lastModified = new Date(document.lastModified);
+
+    const options = {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric'
+    };
+
+    lastUpdateEl.textContent =
+        lastModified.toLocaleDateString('en-GB', options);
+}
