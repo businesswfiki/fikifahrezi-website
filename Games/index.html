@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiki Fahrezi - Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="../favicon.png">
+</head>
+<body>
+
+    <div class="menu-toggle">
+        <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+    </div>
+
+    <div id="myOverlay" class="overlay">
+        <div class="overlay-content">
+            <h2 class="menu-title">Menu</h2>
+            <button class="closebtn" onclick="closeNav()">&times;</button>
+            <a href="../" onclick="closeNav()">Home</a>
+            <a href="../Gear/" onclick="closeNav()">Gear</a>
+            <a href="#" onclick="closeNav()">Games</a>
+        </div>
+    </div>
+
+    <div id="dim-overlay"></div>
+
+    <header class="page-header">
+        <h1>My Games</h1>
+        <p>Competitive & Casual Games I Play</p>
+    </header>
+
+    <main>
+
+        <div class="games-tabs">
+            <button class="tab-btn active" data-tab="mobile">Mobile</button>
+            <button class="tab-btn" data-tab="pc">PC</button>
+        </div>
+
+        <section id="mobile" class="games-wrapper active">
+
+            <div class="game-card">
+                <div class="game-header">
+                    <img src="logo/ml.png" class="game-logo">
+                    <h3>Mobile Legends</h3>
+                </div>
+
+                <div class="info-row">
+                    <label>User ID</label>
+                    <div class="copy-box">
+                        <span id="ml-id">239824580</span>
+                        <button class="copy-btn" data-copy="ml-id">Copy</button>
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <label>Zone ID</label>
+                    <div class="copy-box">
+                        <span id="ml-zone">9252</span>
+                        <button class="copy-btn" data-copy="ml-zone">Copy</button>
+                    </div>
+                </div>
+
+                <div class="screenshot-grid landscape">
+                    <img src="ss/ml_1.jpeg" alt="">
+                    <img src="ss/ml_2.jpeg" alt="">
+                    <img src="ss/ml_3.jpeg" alt="">
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="game-header">
+                    <img src="logo/efbl.png" class="game-logo">
+                    <h3>eFootball</h3>
+                </div>
+
+                <div class="info-row">
+                    <label>Username</label>
+                    <div class="copy-box">
+                        <span id="ef-user">ItsVQ</span>
+                        <button class="copy-btn" data-copy="ef-user">Copy</button>
+                    </div>
+                </div>
+
+                <div class="screenshot-grid landscape">
+                    <img src="ss/efbl_1.jpeg" alt="">
+                    <img src="ss/efBL_2.jpeg" alt="">
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="game-header">
+                    <img src="logo/cr.png" class="game-logo">
+                    <h3>Clash Royale</h3>
+                </div>
+
+                <div class="info-row">
+                    <label>Player Tag</label>
+                    <div class="copy-box">
+                        <span id="cr-tag">#2CUOG2Q82</span>
+                        <button class="copy-btn" data-copy="cr-tag">Copy</button>
+                    </div>
+                </div>
+
+                <div class="screenshot-grid portrait">
+                    <img src="ss/cr_1.jpeg" alt="">
+                    <img src="ss/cr_2.jpeg" alt="">
+                    <img src="ss/cr_3.jpeg" alt="">
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="game-header">
+                    <img src="logo/coc.png" class="game-logo">
+                    <h3>Clash of Clans</h3>
+                </div>
+
+                <div class="info-row">
+                    <label>Player Tag</label>
+                    <div class="copy-box">
+                        <span id="coc-tag">#P8VRCCPLQ</span>
+                        <button class="copy-btn" data-copy="coc-tag">Copy</button>
+                    </div>
+                </div>
+
+                <div class="screenshot-grid landscape">
+                    <img src="ss/coc_1.jpeg" alt="">
+                    <img src="ss/COC_2.png" alt="">
+                    <img src="ss/COC_3.png" alt="">
+                    <img src="ss/coc_4.jpeg" alt="">
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="game-header">
+                    <img src="logo/mcgg.png" class="game-logo">
+                    <h3>Magic Chess: Go Go</h3>
+                </div>
+
+                <div class="info-row">
+                    <label>User ID</label>
+                    <div class="copy-box">
+                        <span id="mc-id">11329940</span>
+                        <button class="copy-btn" data-copy="mc-id">Copy</button>
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <label>Zone ID</label>
+                    <div class="copy-box">
+                        <span id="mc-zone">4082</span>
+                        <button class="copy-btn" data-copy="mc-zone">Copy</button>
+                    </div>
+                </div>
+
+                <div class="screenshot-grid landscape">
+                    <img src="ss/mcgogo_1.jpeg" alt="">
+                    <img src="ss/mcgg_2.jpeg" alt="">
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="game-header">
+                    <img src="logo/gr.png" class="game-logo">
+                    <h3>Line Let's Get Rich</h3>
+                </div>
+
+                <div class="screenshot-grid landscape">
+                    <img src="ss/gr_1.jpeg" alt="">
+                    <img src="ss/gr_2.jpeg" alt="">
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="game-header">
+                    <img src="logo/rbx.png" class="game-logo">
+                    <h3>Roblox</h3>
+                </div>
+
+                <div class="info-row">
+                    <label>Username</label>
+                    <div class="copy-box">
+                        <span id="rb-user">Sahachin6</span>
+                        <button class="copy-btn" data-copy="rb-user">Copy</button>
+                    </div>
+                </div>
+
+                <div class="screenshot-grid landscape">
+                    <img src="ss/RBX_1.png" alt="">
+                    <img src="ss/RBX_2.png" alt="">
+                </div>
+            </div>
+
+        </section>
+
+        <section id="pc" class="games-wrapper">
+
+            <div class="game-card">
+                <div class="game-header">
+                    <img src="logo/pb.png" class="game-logo">
+                    <h3>Point Blank</h3>
+                </div>
+                <p class="coming-soon">Coming Soon</p>
+            </div>
+
+            <div class="game-card">
+                <div class="game-header">
+                    <img src="logo/ls.png" class="game-logo">
+                    <h3>Lost Saga</h3>
+                </div>
+                <p class="coming-soon">Coming Soon</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; Copyright 2025 - Fiki Fahrezi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="imageModal" class="image-modal">
+        <button class="modal-btn prev">&#10094;</button>
+        <img id="modalImage" src="" alt="">
+        <button class="modal-btn next">&#10095;</button>
+        <div class="indicator" id="indicator">1 / 1</div>
+        <span class="close-modal">&times;</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
