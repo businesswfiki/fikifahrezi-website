@@ -1,4 +1,3 @@
-/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -13,24 +12,20 @@ body {
     overflow-x: hidden;
 }
 
-/* KUNCI FIX: Body dilarang scroll saat menu terbuka */
 body.menu-open {
     overflow: hidden;
 }
 
-/* KUNCI FIX: Element yang akan didorong (Push Effect) */
 #page-wrapper {
     transition: transform 0.5s ease-in-out;
-    position: relative; 
+    position: relative;
     z-index: 1;
 }
 
-/* FIX: Mendorong konten utama ke kiri dan mengunci posisinya saat menu terbuka */
 body.menu-open #page-wrapper {
     transform: translateX(-300px);
 }
 
-/* --- DIMMING LAYER STYLE --- */
 #dim-overlay {
     position: fixed;
     top: 0;
@@ -40,7 +35,7 @@ body.menu-open #page-wrapper {
     background: rgba(0, 0, 0, 0);
     visibility: hidden;
     transition: background 0.5s, visibility 0.5s;
-    z-index: 14; 
+    z-index: 14;
     pointer-events: none;
 }
 
@@ -50,14 +45,12 @@ body.menu-open #dim-overlay {
     pointer-events: auto;
 }
 
-/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-/* Section */
 .section {
     min-height: 100vh;
     display: flex;
@@ -65,7 +58,6 @@ body.menu-open #dim-overlay {
     padding: 4rem 0;
 }
 
-/* --- Menu Overlay Styling --- */
 .menu-toggle {
     position: fixed;
     top: 0;
@@ -131,12 +123,12 @@ body.menu-open #dim-overlay {
     height: 100%;
     width: 300px;
     position: fixed;
-    z-index: 15; 
+    z-index: 15;
     top: 0;
     right: 0;
-    background-color: rgba(26, 29, 35, 0.95); 
+    background-color: rgba(26, 29, 35, 0.95);
     overflow-x: hidden;
-    transition: transform 0.5s ease-in-out; 
+    transition: transform 0.5s ease-in-out;
     transform: translateX(100%);
 }
 
@@ -145,8 +137,8 @@ body.menu-open #dim-overlay {
 }
 
 .overlay-content {
-    position: relative; 
-    top: 50px; 
+    position: relative;
+    top: 50px;
     width: 100%;
     text-align: left;
     padding: 0 40px;
@@ -169,14 +161,14 @@ body.menu-open #dim-overlay {
     font-weight: 600;
 }
 
-.overlay a:hover, 
+.overlay a:hover,
 .overlay a:focus {
     color: #c9ff00;
 }
 
 .closebtn {
     position: absolute;
-    top: -15px; 
+    top: -15px;
     right: 5px;
     font-size: 40px;
     color: #ffffff;
@@ -185,12 +177,11 @@ body.menu-open #dim-overlay {
     cursor: pointer;
 }
 
-/* --- Hero Section Updated (2 Columns + ID Card) --- */
 .hero {
     background: radial-gradient(circle at center, #252930 0%, #1a1d23 100%);
     position: relative;
     overflow: hidden;
-    padding-top: 5rem; 
+    padding-top: 5rem;
 }
 
 .hero-layout {
@@ -262,7 +253,6 @@ body.menu-open #dim-overlay {
     animation: bounce 2s infinite;
 }
 
-/* --- 3D ID Card Styles --- */
 .hero-interactive {
     display: flex;
     justify-content: center;
@@ -282,9 +272,9 @@ body.menu-open #dim-overlay {
 .id-card-inner {
     width: 100%;
     height: 100%;
-    position: relative; 
+    position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.6s cubic-bezier(0.3, 1.5, 0.6, 1.2); 
+    transition: transform 0.6s cubic-bezier(0.3, 1.5, 0.6, 1.2);
     cursor: grab;
     user-select: none;
     transform-origin: center center;
@@ -298,40 +288,40 @@ body.menu-open #dim-overlay {
     cursor: grabbing;
 }
 
-.card-front, 
+.card-front,
 .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; 
+    backface-visibility: hidden;
     border-radius: 20px;
-    overflow: hidden; 
-    display: flex; 
+    overflow: hidden;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .card-front {
-    transform: rotateY(0deg); 
+    transform: rotateY(0deg);
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(201, 255, 0, 0.3);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     background-image: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 100%);
-    z-index: 2; 
+    z-index: 2;
 }
 
 .card-back {
-    transform: rotateY(180deg); 
-    background: #111; 
-    border: 3px solid #ffaa00; 
+    transform: rotateY(180deg);
+    background: #111;
+    border: 3px solid #ffaa00;
     box-shadow: 0 0 40px rgba(255, 170, 0, 0.4), inset 0 0 10px rgba(255, 170, 0, 0.2);
-    z-index: 1; 
-    background-image: url('fiki_futuristic_face.png'); 
-    background-size: cover; 
-    background-position: center; 
+    z-index: 1;
+    background-image: url('fiki_futuristic_face.png');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    position: relative; 
+    position: relative;
 }
 
 .card-content {
@@ -347,7 +337,7 @@ body.menu-open #dim-overlay {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
 }
 
 .chip {
@@ -378,7 +368,7 @@ body.menu-open #dim-overlay {
 
 .card-body {
     text-align: center;
-    flex-grow: 1; 
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -397,11 +387,11 @@ body.menu-open #dim-overlay {
     justify-content: center;
     font-size: 2.5rem;
     font-weight: bold;
-    color: #c9ff00; 
+    color: #c9ff00;
     box-shadow: 0 0 20px rgba(201, 255, 0, 0.2);
-    background-image: url('fiki_profile.jpg'); 
+    background-image: url('fiki_profile.jpg');
     background-size: cover;
-    background-position: center; 
+    background-position: center;
 }
 
 .student-info h3 {
@@ -464,7 +454,7 @@ body.menu-open #dim-overlay {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
-    z-index: 1; 
+    z-index: 1;
 }
 
 .card-trading-content {
@@ -476,21 +466,21 @@ body.menu-open #dim-overlay {
     align-items: center;
     padding: 30px 20px;
     text-align: center;
-    position: relative; 
+    position: relative;
     z-index: 2;
 }
 
 .card-back-title {
     font-size: 2.5rem;
     font-weight: 900;
-    color: #ffffff; 
-    text-shadow: 
+    color: #ffffff;
+    text-shadow:
         0 0 5px rgba(255, 255, 255, 0.8),
         0 0 15px #ffaa00,
         0 0 25px #ffaa00;
     letter-spacing: 5px;
     margin-bottom: 10px;
-    position: relative; 
+    position: relative;
     z-index: 2;
 }
 
@@ -500,17 +490,16 @@ body.menu-open #dim-overlay {
     font-weight: 900;
     color: #ffffff;
     letter-spacing: 3px;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     margin-top: 10px;
-    text-shadow: 
+    text-shadow:
         0 0 5px rgba(255, 255, 255, 0.8),
         0 0 15px #ffaa00,
         0 0 25px #ffaa00;
-    position: relative; 
+    position: relative;
     z-index: 2;
 }
 
-/* Section Title */
 .section-title {
     font-size: 3rem;
     font-weight: 900;
@@ -519,7 +508,6 @@ body.menu-open #dim-overlay {
     letter-spacing: 2px;
 }
 
-/* Education Grid */
 .education-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -527,7 +515,6 @@ body.menu-open #dim-overlay {
     margin-top: 2rem;
 }
 
-/* --- Experience Grid Stacking Fix --- */
 .experience-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -544,7 +531,7 @@ body.menu-open #dim-overlay {
 }
 
 .tab-content {
-    grid-area: 1 / 1; 
+    grid-area: 1 / 1;
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s ease-in-out;
@@ -561,7 +548,6 @@ body.menu-open #dim-overlay {
     z-index: 1;
 }
 
-/* Card Styles */
 .card {
     background: #252930;
     border: 1px solid #333842;
@@ -620,7 +606,6 @@ body.menu-open #dim-overlay {
     font-size: 0.95rem;
 }
 
-/* Tabs */
 .tabs {
     display: flex;
     gap: 1rem;
@@ -662,11 +647,10 @@ body.menu-open #dim-overlay {
     stroke: #1a1d23;
 }
 
-/* --- Contact Section --- */
-.section#contact { 
+.section#contact {
     background: radial-gradient(circle at center, #252930 0%, #1a1d23 100%);
     text-align: center;
-    min-height: auto; 
+    min-height: auto;
     padding-bottom: 6rem;
 }
 
@@ -676,25 +660,25 @@ body.menu-open #dim-overlay {
     font-size: 1.1rem;
     margin-bottom: 3rem;
     max-width: 700px;
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: auto;
 }
 
 .email-link {
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     gap: 0.8rem;
     font-size: 1.5rem;
     color: #c9ff00;
     text-decoration: none;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
     font-weight: 600;
     transition: all 0.3s ease;
 }
 
 .email-link.whatsapp-link {
-    margin-bottom: 3rem; 
+    margin-bottom: 3rem;
 }
 
 .email-link:hover {
@@ -750,7 +734,6 @@ body.menu-open #dim-overlay {
     stroke: #1a1d23;
 }
 
-/* --- Footer --- */
 footer {
     background-color: #111;
     padding: 1.5rem 0;
@@ -760,7 +743,6 @@ footer {
     border-top: 1px solid #333842;
 }
 
-/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -799,7 +781,6 @@ footer {
     }
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
     .hero-layout {
         grid-template-columns: 1fr;
@@ -819,8 +800,8 @@ footer {
     .hero-address {
         margin-bottom: 2rem;
     }
-    
-    .education-grid, 
+
+    .education-grid,
     .experience-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -830,24 +811,24 @@ footer {
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.2rem;
     }
-    
+
     .section-title {
         font-size: 2rem;
     }
-    
-    .education-grid, 
+
+    .education-grid,
     .experience-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .tabs {
         flex-direction: column;
     }
-    
+
     .social-links {
         flex-direction: column;
         align-items: center;
