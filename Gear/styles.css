@@ -78,11 +78,14 @@ h2 {
     text-align: center;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
     transition: 0.25s ease;
+    border: 1px solid transparent;
 }
 
 .gear-card:hover,
 .device-card:hover {
     transform: translateY(-5px);
+    border-color: #c9ff00;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 .gear-card img,
@@ -224,6 +227,7 @@ body.menu-open .openbtn {
     color: #ffffff;
     margin-bottom: 25px;
     font-weight: 900;
+    text-align: left;
 }
 
 .overlay a {
