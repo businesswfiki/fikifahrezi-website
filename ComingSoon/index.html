@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coming Soon</title>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="../favicon.png">
+</head>
+
+<body>
+
+<!-- MENU BUTTON -->
+<div class="menu-toggle">
+    <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+</div>
+
+<!-- OVERLAY -->
+<div id="myOverlay" class="overlay">
+    <div class="overlay-content">
+        <h2 class="menu-title">Menu</h2>
+
+        <button class="closebtn" onclick="closeNav()">&times;</button>
+
+        <a href="../" onclick="closeNav()">Home</a>
+        <a href="../Gear/" onclick="closeNav()">Gear</a>
+        <a href="../Games/" onclick="closeNav()">Games</a>
+        <a href="../Items/" onclick="closeNav()">Items</a>
+        <a href="#" onclick="closeNav()">Playlist</a>
+        <a href="#" onclick="closeNav()">Wishlist</a>
+        <a href="#" onclick="closeNav()">Random Fact</a>
+        <a href="#" onclick="closeNav()">Hall of Fame</a>
+    </div>
+</div>
+
+<!-- DIM BACKGROUND -->
+<div id="dim-overlay"></div>
+
+<!-- PAGE WRAPPER (WAJIB ADA) -->
+<div id="page-wrapper">
+
+<section class="section-comingsoon">
+    <div class="coming-container">
+
+        <div class="coming-badge">COMING SOON</div>
+
+        <h1 class="coming-title">MAINTENACE</h1>
+
+        <p class="coming-subtitle">
+            This section is currently under development.
+            We are preparing something great for you.
+        </p>
+
+        <div class="coming-icon">
+            🚀
+        </div>
+
+        <div class="coming-progress">
+            <div class="coming-progress-bar"></div>
+        </div>
+
+        <p class="coming-status" id="comingStatus">
+            Preparing content...
+        </p>
+
+        <a href="../" class="coming-btn">
+            BACK TO HOME
+        </a>
+
+    </div>
+</section>
+
+</div> <!-- END page-wrapper -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,317 @@
+/* ========================= */
+/* ===== BASE CONTEXT ===== */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+    background-color:#1a1d23;
+    color:#e0e0e0;
+    line-height:1.6;
+    overflow-x:hidden;
+
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    text-rendering:optimizeLegibility;
+}
+
+body.menu-open{
+    overflow:hidden;
+}
+
+
+/* ========================= */
+/* ===== PAGE SHIFT ======== */
+/* ========================= */
+
+#page-wrapper{
+    transition:transform .5s cubic-bezier(.4,0,.2,1);
+    position:relative;
+    z-index:1;
+}
+
+body.menu-open #page-wrapper{
+    transform:translateX(-300px);
+}
+
+
+/* ========================= */
+/* ===== DIM BACKGROUND ==== */
+/* ========================= */
+
+#dim-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0);
+    visibility:hidden;
+    transition:background .5s ease, visibility .5s ease;
+    z-index:14;
+    pointer-events:none;
+}
+
+body.menu-open #dim-overlay{
+    background:rgba(0,0,0,.4);
+    visibility:visible;
+    pointer-events:auto;
+}
+
+
+/* ========================= */
+/* ===== MENU BUTTON ======= */
+/* ========================= */
+
+.menu-toggle{
+    position:fixed;
+    top:0;
+    right:0;
+    z-index:20;
+}
+
+.openbtn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    user-select:none;
+    position:fixed;
+
+    height:2.5rem;
+    min-width:2.5rem;
+    padding:0 1rem;
+
+    font-size:1rem;
+    font-weight:600;
+    line-height:1.2;
+
+    background:#ffffff;
+    color:#1a1d23;
+    border:none;
+    cursor:pointer;
+
+    top:0;
+    right:0;
+
+    transition:background-color .2s ease, opacity .3s ease;
+}
+
+.openbtn:hover{
+    background:#f7f7f7;
+}
+
+.openbtn:active{
+    background:#e8e8e8;
+}
+
+body.menu-open .openbtn{
+    opacity:0;
+    pointer-events:none;
+}
+
+/* Desktop spacing (INI YANG BIKIN IDENTIK) */
+@media screen and (min-width:48em){
+    .openbtn{
+        top:1rem;
+        right:1rem;
+    }
+}
+
+
+/* ========================= */
+/* ===== OVERLAY PANEL ===== */
+/* ========================= */
+
+.overlay{
+    height:100%;
+    width:300px;
+    position:fixed;
+    top:0;
+    right:0;
+    z-index:15;
+
+    background-color:rgba(26,29,35,.95);
+
+    overflow-x:hidden;
+
+    transition:transform .5s cubic-bezier(.4,0,.2,1);
+    transform:translateX(100%);
+}
+
+.overlay.open{
+    transform:translateX(0);
+}
+
+.overlay-content{
+    position:relative;
+    top:52px;
+    padding:0 40px;
+    text-align:left;
+}
+
+
+/* Menu Title */
+.menu-title{
+    font-size:2.5rem;
+    color:#ffffff;
+    margin-bottom:28px;
+    font-weight:900;
+}
+
+
+/* Menu Links */
+.overlay a{
+    padding:10px 0;
+    text-decoration:none;
+    font-size:1.5rem;
+    color:#dcdcdc;
+    display:block;
+    font-weight:600;
+    transition:color .25s ease;
+}
+
+.overlay a:hover,
+.overlay a:focus{
+    color:#c9ff00;
+}
+
+
+/* Close Button */
+.closebtn{
+    position:absolute;
+    top:-12px;
+    right:6px;
+    font-size:40px;
+    color:#ffffff;
+    background:none;
+    border:none;
+    cursor:pointer;
+    line-height:1;
+}
+
+/* ============================= */
+/* ===== UNIVERSAL COMING ===== */
+/* ============================= */
+
+.section-comingsoon{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 20px 60px;
+}
+
+.coming-container{
+    max-width:800px;
+    margin:auto;
+}
+
+/* Badge */
+.coming-badge{
+    display:inline-block;
+    border:1px solid #c9ff00;
+    color:#c9ff00;
+    padding:6px 16px;
+    border-radius:50px;
+    letter-spacing:2px;
+    font-weight:600;
+    margin-bottom:30px;
+    background:rgba(201,255,0,.08);
+    font-size:14px;
+}
+
+/* Title */
+.coming-title{
+    font-size:clamp(42px,7vw,80px);
+    font-weight:900;
+    letter-spacing:6px;
+    margin-bottom:15px;
+    text-shadow:0 0 25px rgba(201,255,0,.25);
+}
+
+/* Subtitle */
+.coming-subtitle{
+    color:#888;
+    font-size:18px;
+    margin-bottom:50px;
+    line-height:1.6;
+}
+
+/* Icon Circle */
+.coming-icon{
+    width:160px;
+    height:160px;
+    margin:40px auto;
+    border-radius:50%;
+    background:linear-gradient(145deg,#2a2f37,#1c2026);
+    border:2px solid rgba(201,255,0,.3);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:60px;
+    box-shadow:0 0 40px rgba(201,255,0,.15);
+    animation:comingPulse 2.5s ease-in-out infinite;
+}
+
+/* Progress Bar */
+.coming-progress{
+    width:100%;
+    height:6px;
+    background:#333842;
+    border-radius:50px;
+    overflow:hidden;
+    margin:40px 0;
+}
+
+.coming-progress-bar{
+    width:60%;
+    height:100%;
+    background:linear-gradient(90deg,transparent,#c9ff00,transparent);
+    animation:comingLoading 2s linear infinite;
+}
+
+/* Status */
+.coming-status{
+    color:#aaa;
+    margin-top:15px;
+    font-size:14px;
+    letter-spacing:1px;
+    transition:opacity .3s ease;
+}
+
+/* Button */
+.coming-btn{
+    display:inline-block;
+    margin-top:30px;
+    text-decoration:none;
+    color:#1a1d23;
+    background:#c9ff00;
+    padding:14px 36px;
+    border-radius:50px;
+    font-weight:700;
+    letter-spacing:1px;
+    transition:.25s ease;
+}
+
+.coming-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(201,255,0,.3);
+}
+
+
+/* Animations */
+@keyframes comingLoading{
+    0%{transform:translateX(-100%)}
+    100%{transform:translateX(200%)}
+}
+
+@keyframes comingPulse{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.08)}
+}
